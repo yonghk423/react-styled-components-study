@@ -17,23 +17,20 @@ const Main = () => {
                     </p>                   
                 </div>
                 <div className='search'>
-                    <div className='container'>
-                        <label htmlFor=''>where you want to go</label>
-                        <input type='text' placeholder='Search your Location' />
+                    <div className="container">
+                        <label htmlFor="">Where you want to go</label>
+                        <input type="text" placeholder="Search Your location" />
                     </div>
-                </div>
-                <div className='search'>
                     <div className='container'>
                         <label htmlFor=''>Check-in</label>
-                        <input type='data'/>
+                        <input type='date'/>
                     </div>
-                </div>
-                <div className='search'>
                     <div className='container'>
-                        <label htmlFor=''>Check-out</label>
-                        <input type='data'/>
+                        <label htmlFor=''>Check-Out</label>
+                        <input type='date'/>
                     </div>
-                </div>
+                    <button>Explore Now</button>
+                </div>               
             </div>
         </Section>
     )
@@ -41,4 +38,15 @@ const Main = () => {
 
 export default Main;
 
-const Section = styled.section``;
+const Section = styled.section`
+    position: relative;
+    margin-top: 2rem;
+    width: 100%;
+    height: 100%;
+    .background {
+        img {
+            width: 100%;
+            filter: brightness(60%);
+        }
+    }
+`;
