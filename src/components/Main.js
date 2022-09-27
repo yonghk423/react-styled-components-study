@@ -95,6 +95,28 @@ const Section = styled.section`
                     border: none;
                     text-align: center;
                     color: black;
+                    &[type='date'] {
+                        padding-left: 3rem;
+                    }
+                    &::placeholder {
+                        color: black;
+                    }
+                    &:focus {
+                        outline: none;
+                    }
+                }
+            }
+            button {
+                padding: 1rem;
+                cursor: pointer;
+                border-radius: 0.3rem;
+                border: none;
+                color:  white;
+                background-color: #4361ee;
+                font-size: 1.1rem;
+                text-transform: 0.3s ease-in-out;
+                &:hover {
+                    background-color: #023e8a;
                 }
             }
         }
