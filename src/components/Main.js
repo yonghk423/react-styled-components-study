@@ -44,9 +44,16 @@ const Section = styled.section`
     width: 100%;
     height: 100%;
     .background {
+        height: 100%;
         img {
             width: 100%;
             filter: brightness(60%);
         }
+    }
+    .content {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top:0;
     }
 `;
