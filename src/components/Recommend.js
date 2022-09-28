@@ -62,9 +62,50 @@ const Recommend = () => {
     "The Group Tour",
     "Long Term Slow Travel",
   ];
+  const [active, setActive]  = useState(1);
     return (
-        <div></div>
+        <Section>
+            <div>
+                <h2>Recommended Destinations</h2>
+            </div>
+            <div>
+                <ul>
+                    {packages.map((pkg, index) => {
+                        return (
+                            <li>
+                                {pkg}
+                            </li>
+                        )
+                    })}
+                </ul>
+            </div>
+            <div>
+                {data.map((destination) => {
+                    return (
+                        <div>
+                            <img src={destination.image} alt='' />
+                            <h3>{destination.title}</h3>
+                            <p>{destination.subTitle}</p>
+                            <div>
+                                <div>
+                                    <img src={info1} alt='' />
+                                    <img src={info2} alt=''/>
+                                    <img src={info3} alt=''/>
+                                </div>
+                                <h4>{destination.cost}</h4>
+                            </div>
+                            <div>
+                                <span>1000 Kms</span>
+                                <span>{destination.duration}</span>
+                            </div>
+                        </div>
+                    )
+                })}
+            </div>
+        </Section>
     )
 }
 
 export default Recommend;
+
+const Section = styled.section``;
