@@ -90,6 +90,11 @@ const Section = styled.section`
                     border-radius: 3rem;
                     height: 3rem;
                 }
+                .details {
+                    span {
+                        font-size: 0.9rem;
+                    }
+                }
             }
         }        
     }
