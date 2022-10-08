@@ -35,7 +35,7 @@ const Services = () => {
   ];
 
     return (
-        <Section>
+        <Section id="services">
             {data.map((service, index) => {
                 return (
                     <div className='service'>

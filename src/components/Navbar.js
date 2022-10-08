@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import logo from "../assets/logo.png"
+import { GiHamburgerMenu } from "react-icons/gi";
+import { VscChromeClose } from "react-icons/vsc";
+
 const Navbar = () => {
+    const [navbarState, setNavbarState] = useState(false);
+
     return (
         <>
             <Nav>
@@ -10,7 +15,13 @@ const Navbar = () => {
                         <img src={logo} alt="" />
                         Travelo
                     </div>
-                    <div className='toggle'></div>
+                    <div className='toggle'>
+                        { navbarState ? (
+                            <VscChromeClose />
+                        ) : (
+                            <GiHamburgerMenu />
+                        )}
+                    </div>
                 </div>
                 <ul>
                     <li><a href='#home'>Home</a></li>
@@ -27,6 +38,23 @@ const Navbar = () => {
 export default Navbar;
 
 const Nav = styled.nav`
+    @media screen and (min-width: 280px) and (max-width: 1080px) {
+       .brand {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+            .toggle {
+                display: block;
+            }
+       }
+       ul {
+        display: none;        
+       }
+       button {
+        display: none;
+       }
+    }
     display: flex;
     justify-content: space-between;
     align-items: center;

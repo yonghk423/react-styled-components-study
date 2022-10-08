@@ -121,4 +121,27 @@ const Section = styled.section`
             }
         }
     }
+    @media screen and (min-width: 280px) and (max-width: 980px) {
+        height: 25rem;
+        .background {
+            background-color: palegreen;
+            img {
+                height: 100%;
+            }
+        }
+        .content {
+            .title {
+                h1 {
+                    font-size: 1rem;
+                }
+                p {
+                    font-size: 0.8rem;
+                    padding: 1vw;
+                }
+            }
+            .search {
+                flex-direction: column;
+            }
+        }
+    }
 `;
