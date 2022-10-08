@@ -141,6 +141,18 @@ const Section = styled.section`
             }
             .search {
                 flex-direction: column;
+                padding: 0.8rem;
+                gap: 0.8rem;
+                .container {
+                    padding: 0.08rem;
+                    input[type='date'] {
+                        padding-left: 1rem;
+                    }
+                }
+                button {
+                    padding: 1rem;
+                    font-size: 1rem;
+                }
             }
         }
     }
