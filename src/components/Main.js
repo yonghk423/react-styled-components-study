@@ -155,5 +155,5 @@ const Section = styled.section`
                 }
             }
         }
-    }
+    }    
 `;
