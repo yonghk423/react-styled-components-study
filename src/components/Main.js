@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import homeImage from '../assets/main.png'
 const Main = () => {
     return (
-        <Section>
+        <Section id='Main'>
             <div className='background'>
                 <img src={homeImage} alt='' />
             </div>

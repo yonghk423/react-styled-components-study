@@ -17,9 +17,9 @@ const Navbar = () => {
                     </div>
                     <div className='toggle'>
                         { navbarState ? (
-                            <VscChromeClose />
+                            <VscChromeClose onClick={() => setNavbarState(false)} />
                         ) : (
-                            <GiHamburgerMenu />
+                            <GiHamburgerMenu onClick={() => setNavbarState(true)} />
                         )}
                     </div>
                 </div>
@@ -31,30 +31,37 @@ const Navbar = () => {
                 </ul>
                 <button>Connect</button>
             </Nav>
+            <ResponsiveNav state={navbarState}>
+                <ul>
+                    <li>
+                        <a href="#home" onClick={() => setNavbarState(false)}>
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#services" onClick={() => setNavbarState(false)}>
+                            About
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#recommend" onClick={() => setNavbarState(false)}>
+                            Places
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#testimonials" onClick={() => setNavbarState(false)}>
+                            Testimonials
+                        </a>
+                    </li>
+                </ul>
+            </ResponsiveNav>           
         </>
     )
 }
 
 export default Navbar;
 
-const Nav = styled.nav`
-    @media screen and (min-width: 280px) and (max-width: 1080px) {
-       .brand {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-            .toggle {
-                display: block;
-            }
-       }
-       ul {
-        display: none;        
-       }
-       button {
-        display: none;
-       }
-    }
+const Nav = styled.nav`   
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -110,4 +117,59 @@ const Nav = styled.nav`
         background-color: #023e8a;
         }
     }
+    @media screen and (min-width: 280px) and (max-width: 1080px) {
+    .brand {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      .toggle {
+        display: block;
+        cursor: pointer;
+      }
+    }
+    ul {
+      display: none;
+    }
+    button {
+      display: none;
+    }
+  }
+`;
+const ResponsiveNav = styled.div`
+  display: flex;
+  position: absolute;
+  z-index: 5;
+  top: ${({ state }) => (state ? "50px" : "-400px")};
+  background-color: white;
+  height: 30vh;
+  width: 100%;
+  align-items: center;
+  transition: 0.3s ease-in-out;
+  ul {
+    list-style-type: none;
+    width: 100%;
+    li {
+      width: 100%;
+      margin: 1rem 0;
+      margin-left: 2rem;
+      cursor: pointer;
+
+      a {        
+        text-decoration: none;
+        color: #0077b6;
+        font-size: 1.2rem;
+        transition: 0.1s ease-in-out;
+        &:hover {
+          color: #023e8a;
+        }
+      }
+      &:first-of-type {
+        a {
+          color: #023e8a;
+          font-weight: 900;
+        }
+      }
+    }
+  }
 `;
