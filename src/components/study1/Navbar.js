@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import logo from "../assets/logo.png"
+import logo from "../study1/assets/logo.png"
 import { GiHamburgerMenu } from "react-icons/gi";
 import { VscChromeClose } from "react-icons/vsc";
 
@@ -140,12 +140,12 @@ const ResponsiveNav = styled.div`
   display: flex;
   position: absolute;
   z-index: 5;
-  top: ${({ state }) => (state ? "50px" : "-400px")};
+  right: ${({ state }) => (state ? "-20px" : "-100%")};
   background-color: white;
   height: 30vh;
   width: 100%;
   align-items: center;
-  transition: 0.3s ease-in-out;
+  transition: 1s ease-in-out;
   ul {
     list-style-type: none;
     width: 100%;

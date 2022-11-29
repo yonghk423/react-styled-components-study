@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import homeImage from '../assets/main.png'
+import homeImage from '../study1/assets/main.png'
 const Main = () => {
     return (
         <Section id='Main'>

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import logo from "../assets/logo.png";
+import logo from "../study1/assets/logo.png";
 
 const ScrollToTop = () => {
     const [scrollState, setScrollState] = useState(false);

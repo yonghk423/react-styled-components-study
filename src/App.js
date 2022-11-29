@@ -1,11 +1,11 @@
 import './App.css';
-import Navbar from './components/Navbar';
-import ScrollToTop from './components/ScrollToTop';
-import Main from './components/Main';
-import Services from './components/Services';
-import Recommend from './components/Recommend';
-import Testimonials from './components/Testimonials';
-import Footer from './components/Footer';
+import Navbar from './components/study1/Navbar';
+import ScrollToTop from './components/study1/ScrollToTop';
+import Main from './components/study1/Main';
+import Services from './components/study1/Services';
+import Recommend from './components/study1/Recommend';
+import Testimonials from './components/study1/Testimonials';
+import Footer from './components/study1/Footer';
 import scrollreveal from 'scrollreveal';
 import React,{ useEffect } from 'react';
 
